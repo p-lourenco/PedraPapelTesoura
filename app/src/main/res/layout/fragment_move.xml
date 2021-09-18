@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.RoundFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/moveLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.20">
+
+
+            <ImageView
+                android:id="@+id/player2ImageView"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:padding="10dp"
+                android:src="@mipmap/choice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/player2ImageView"
+                app:layout_constraintStart_toStartOf="@id/player2ImageView"
+                android:text="Player 2"/>
+
+            <ImageView
+                android:id="@+id/player3ImageView"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:padding="10dp"
+                android:src="@mipmap/choice"
+                app:layout_constraintStart_toEndOf="@id/player2ImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player3"
+                app:layout_constraintStart_toStartOf="@id/player3ImageView"
+                app:layout_constraintBottom_toBottomOf="@id/player3ImageView"/>
+
+            <ImageView
+                android:id="@+id/player1ImageView"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:padding="10dp"
+                android:src="@mipmap/choice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/player2ImageView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/player1ImageView"
+                app:layout_constraintBottom_toBottomOf="@id/player1ImageView"
+                android:text="You"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/restartButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restart"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/moveResultTextView"
+            app:layout_constraintTop_toBottomOf="@id/moveLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rockFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resultado"/>
+
+        <ImageButton
+            android:id="@+id/scissorsFB"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/ic_tick"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:elevation="16dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/scissors"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/rockFB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moveResultTextView" />
+
+        <ImageButton
+            android:id="@+id/rockFB"
+            app:layout_constraintStart_toEndOf="@id/scissorsFB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/paperFB"
+            app:layout_constraintTop_toBottomOf="@id/moveResultTextView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/ic_tick"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@mipmap/stone"
+            android:scaleType="centerCrop"
+            android:elevation="16dp"/>
+
+        <ImageButton
+            android:id="@+id/paperFB"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/ic_tick"
+            android:elevation="16dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/paper"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rockFB"
+            app:layout_constraintTop_toBottomOf="@id/moveResultTextView" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
